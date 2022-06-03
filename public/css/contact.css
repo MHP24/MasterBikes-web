@@ -1,0 +1,167 @@
+:root {
+    --color-c1: #171717;
+    --color-c2: #272727;
+    --color-c3: #EDEDED;
+    --color-c3--hover: #c9c9c9;
+    --color-c4: #AF012D;
+    --color-c5: #413F3F;
+    --color-c6: #111111;
+    --font-type: 'Open Sans', sans-serif;
+    --font-type-titles: 'Lato', sans-serif;
+    --font-color: #FFFFFF;
+    --font-size-title: 2rem;
+    --font-size-text: 1.2rem;
+}
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-c1);
+    font-family: var(--font-type);
+}
+
+.main {
+    margin: 6rem 0;
+}
+/* Contact Form and bg */
+.contact {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.bg-contact {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    background-image: url('../img/bg-contact.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.bg-contact::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.486);
+}
+
+.form-container {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    z-index: 5;
+    padding: 2em 0;
+    margin: 8em auto 3em auto;
+    width: 80%;
+    background-color: var(--color-c4);
+    text-align: center;
+}
+
+.container__title {
+    width: 100%;
+    color: var(--font-color);
+    font-size: var(--font-size-title);
+    font-family: var(--font-type-titles);
+    text-transform: uppercase;
+}
+
+.contact-form {
+    padding: 0 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+}
+
+.fields {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.6em;
+}
+
+.field__label {
+    color: var(--font-color);
+    font-family: var(--font-type);
+    font-size: var(--font-size-text);
+    /* border: 2px red solid; */
+    width: 100%;
+}
+
+.field__input::placeholder,
+.field__description::placeholder {
+    font-style: italic;
+    font-family: var(--font-type);
+    color: var(--font-color);
+    font-size: 1rem;
+}
+
+.field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    align-items: left;
+    text-align: left;
+    /* border: 2px blue solid; */
+}
+
+.field__input,
+.field__description {
+    color: var(--font-color);
+    font-family: var(--font-type);
+    font-size: var(--font-size-text);
+    padding: .4em;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: var(--color-c5);
+
+}
+
+.field__input, .field__description {
+    /* border: 2px greenyellow solid; */
+    width: 100%;
+}
+
+.field__description {
+    height: 125px;
+    resize: none;
+}
+
+.g--btns {
+    align-self: flex-start;
+}
+
+@media (max-width: 750px) {
+    .fields {
+        flex-direction: column;
+    }
+}
+
+/* Location */
+
+.location-container {
+    padding: 2em;
+    margin: auto;
+    background-color: var(--color-c2);
+    width: 80%;
+    height: 500px;
+    text-align: center;
+}
+
+.location__title {
+    color: var(--font-color);
+    font-size: var(--font-size-title);
+    font-family: var(--font-type-titles);
+    text-transform: uppercase;
+}
